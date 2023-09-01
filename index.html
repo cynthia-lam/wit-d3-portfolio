@@ -4,59 +4,167 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cynthia's Porfolio</title>
+    <!-- Satoshi from fontshare -->
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@700,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Linking to CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awesome logos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
+
   <body>
+    <!-- Navigation menu -->
     <nav id="nav-bar">
-      <p>Cynthia Lam</p>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <a id="nav-logo" href="#hero-section"><p>Cynthia Lam</p></a>
+      <!-- Navigation items -->
+      <ul class="nav-list">
+        <li><a class="nav-links" href="#about-section">About</a></li>
+        <li><a class="nav-links" href="#projects-section">Projects</a></li>
+        <li><a class="nav-links" href="#contact-section">Contact</a></li>
       </ul>
     </nav>
 
     <section id="hero-section">
       <h1>Hi I'm Cynthia 😊</h1>
-      <p>I'm a software developer form Canada!</p>
+      <p>I'm an aspiring developer from Toronto!</p>
     </section>
 
     <section id="about-section">
-      <div>
-        <h2>About me:</h2>
-        <p>Insert more info here!</p> <br><br><br><br><br><br><br><br>
-      </div>
-      <div>
-        <img
-          src="../barbie.jpg"
-          alt="Margot Robbie as Barbie!"
-          style="width: 270px; height: 300px"
-        />
+      <!-- about info: left text boxes + pic w/o background -->
+      <div class="about-info">
+        <!-- left text boxes -->
+        <div class="about-text">
+          <div><h2>About me:</h2></div>
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+        <!-- pic -->
+        <div class="image-container">
+          <img
+            src="C:\Users\cynth\OneDrive\Desktop\Jobs\Cynthia Lam Photo.jpg"
+            alt="In case you can't see, it's me!"
+            style="width: 270px; height: 370px"
+          />
+        </div>
       </div>
     </section>
 
-    <br><br><br><br><br><br><br><br>
-
-    <section id="projects">
-        <div class="grid-item"></div>
-        <!-- single page portfolio that will take us to diff parts of the page
-            1. H3
-            2. Image
-            3. p tag for desc
-            4. a tag link to github -->
+    <section id="projects-section">
+      <!-- all the boxes -->
+      <div class="project-info">
+        <!-- this will be flex-direction: column -->
+        <div><h2>Projects</h2></div>
+        <!-- these will be flex-direction: row -->
+        <div class="project-boxes">
+          <div class="project-box">
+            <h3>Project 1:</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <div class="project-box">
+            <h3>Project 2:</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-        <!-- link to email, LI, github -->
+    <section id="contact-section">
+      <div class="contact-info">
+        <!-- lefty text boxes -->
+        <div class="contact-text">
+          <div><h2>Let's connect!</h2></div>
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <br>
+        <div id="logo-container">
+          <!-- link to email, LI, github -->
+          <a href="https://www.linkedin.com/in/lam-cynthia/"
+            ><i class="fa-brands fa-linkedin fa-2xl" style="color: #2fb8d0"></i
+          ></a>
+          <a href="https://github.com/cynthia-lam"
+            ><i class="fa-brands fa-github fa-2xl" style="color: #2fb8d0"></i
+          ></a>
+        </div>
+      </div>
+      <!-- form -->
+      <div id="contact-form">
         <p>Reach me here:</p>
+        <form action="/submit" method="post">
+          <label for="name">Name:</label> <br />
+          <input
+            class="text-input"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+          />
+          <br />
+          <label for="email">Email:</label> <br />
+          <input
+            class="text-input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email"
+          />
+          <br />
+          <label for="message"> Your Message:</label> <br />
+          <textarea
+            id="message"
+            name="contact-me"
+            placeholder="Your message here"
+          ></textarea>
+          <br />
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
     </section>
-
-    <br><br><br><br><br><br><br><br>
 
     <footer>
-        <p>More text here</p>
+      <p id="footer-text">Made with 💖 by Cynthia Lam</p>
     </footer>
-
-    <br><br><br><br><br><br><br><br>
-    
   </body>
 </html>

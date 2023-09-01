@@ -1,0 +1,302 @@
+/* without this background colours/images will not cover full screen width */
+body {
+  margin: 0;
+}
+
+/* smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Make nav-bar fixed */
+#nav-bar {
+  position: fixed;
+  top: 0px;
+  background-color: #153243;
+  width: 100%;
+}
+
+/* applies font to all elements in the body */
+body {
+  font-family: "Satoshi", sans-serif;
+}
+
+/* making nav logo large */
+#nav-logo {
+  font-weight: bold;
+  font-size: xxx-large;
+  margin-left: 100px;
+}
+
+/* remove underline in the navigation bar links */
+.nav-links,
+#nav-logo {
+  text-decoration: none;
+}
+
+/* apply font-weight of 700 to nav-logo */
+.nav-links {
+  font-weight: 300;
+  font-size: large;
+  margin-right: 100px;
+}
+
+/* apply flexbox to ANY AND ALL ELEMENTS */
+nav,
+.nav-list,
+#hero-section,
+#about-section,
+.about-info,
+#projects-section,
+.project-info,
+.project-boxes, 
+.project-box,
+#contact-section, 
+.contact-info,
+.contact-text,
+#logo-container,
+#contact-form, 
+footer {
+  display: flex;
+}
+
+/* remove list style type, width to 25% of parent (nav) */
+.nav-list {
+  list-style-type: none;
+  justify-content: space-around;
+  width: 25%;
+  align-items: center;
+}
+
+/* evenly spacing nav-logo and nav-links */
+nav {
+  justify-content: space-between;
+  color: #b3dfea;
+}
+
+#nav-logo,
+.nav-links {
+  color: #b3dfea;
+}
+
+#hero-section {
+  background-color: #fdfff8;
+  color: #153243;
+}
+
+#hero-section h1 {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #04AA6D;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em;
+  /* Adjust as needed */
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 26%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #153243;
+  }
+}
+
+/* making each section take up 100% of viewport */
+#hero-section,
+#about-section,
+#projects-section,
+#contact-section,
+footer {
+  height: 100vh;
+  margin-top: 108px;
+}
+
+#hero-section {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: xxx-large;
+}
+
+p {
+  font-size: x-large;
+}
+
+body {
+  background-color: #fdfff8;
+}
+
+#about-section {
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #ddffed;
+}
+
+.about-info {
+  justify-content: space-between;
+  margin-left: 5%;
+  width: 85%;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.about-text {
+  margin-left: 5%;
+  margin-right: 15%;
+  width: 85%;
+  flex-direction: column;
+}
+
+.text-input {
+  height: 30px;
+  line-height: 30px;
+}
+
+.image-container {
+}
+
+#projects-section {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdfff8;
+}
+
+.project-info{
+  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-boxes{
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.project-box {
+  flex-direction: column;
+  background-color: #153243;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#contact-section {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ddffed;
+}
+
+.contact-info {
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-text{
+  flex-direction: column;
+  margin: 50px;
+  margin-right: 150px;
+  width: 50%;
+}
+
+#logo-container{
+justify-content: space-evenly;
+}
+
+#contact-form {
+  flex-direction: column;
+  height: 35%;
+  width: 30%;
+}
+
+/* coloured borders */
+  input,textarea{
+    border: 2px solid #04AA6D;
+    font-family: "Satoshi", sans-serif;
+  }
+  
+  /* rounded edges */
+  input,textarea{
+    border-radius: 5px;
+  }
+  
+  /* code to have textarea and input field be the same length */
+  input.text-input,textarea{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 400px;
+  } 
+  
+  /* i have no idea what this does
+  
+  .text-input {
+    height: 30px;
+    line-height: 30px;
+  } */
+
+/* input[type=text],
+input[type=email],
+input[type=message] {
+  border: 5px #1c3b0e;
+  border-radius: 100px;
+  box-sizing: border-box;
+} */
+
+/* making the button green background */
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  /* padding: 16px 32px; */
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* making text area which is all message boxes */
+textarea {
+  height: 200px;
+}
+
+footer {
+  margin-top: -8px;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdfff8;
+  width: 100%;
+  height: 60px;
+}
+
+#footer-text{
+  font-size: medium;
+}
