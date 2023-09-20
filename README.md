@@ -12,8 +12,8 @@ Hi there! My name is Cynthia and this is my first ever portfolio in my coding jo
 ## My journey
 There were a lot of things that went right and so many more that went wrong. Here are a few instant wins (yay!) and also that I had to overcome: 
 - smooth scroll
-- timeline creation
-- z-index
+- [timeline creation](https://www.w3schools.com/howto/howto_css_timeline.asp)
+- [z-index](https://www.google.com/search?q=css+content+showing+on+top+of+header&rlz=1C1VDKB_enCA1036CA1036&oq=css+content+showing+on+top+of+header&aqs=chrome..69i57j33i160.6101j0j4&sourceid=chrome&ie=UTF-8)
 - [multiple classes](https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/CSS_FAQ)
 - [animate on scroll](https://blog.hubspot.com/website/css-animate-on-scroll#how)
 
