@@ -1,13 +1,32 @@
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry)
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        } else {
-            entry.target.classList.remove('show');
-        }
-    });
-});
+const elements = document.querySelectorAll('.fade-lefttoright');
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: .4
+}
 
-const hiddenElements = document.querySelectorAll('hidden');
-hiddenElements.forEach((el) => observer.observe(el));
+const elements2 = document.querySelectorAll('.fade-righttoleft');
+const options2 = {
+  root: null,
+  rootMargin: '0px',
+  threshold: .4
+}
+const callbacks = (entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting){
+      entry.target.classList.add('active');
+    } 
+    // else {
+    //   entry.target.classList.remove('active');
+    // }
+  });
+}
+
+
+let observer = new IntersectionObserver(callbacks, options);
+elements.forEach(element => {
+  observer.observe(element);
+});
+elements2.forEach(element => {
+    observer.observe(element);
+  });

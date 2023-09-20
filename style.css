@@ -164,6 +164,25 @@ body {
   margin-right: 200px;
 }
 
+/* trying the fade in here  */
+.fade-lefttoright {
+  opacity:0;
+  transform: translateX(-40%);
+  transition: all 1s ease-out;
+}
+
+.fade-righttoleft {
+  opacity:0;
+  transform: translateX(40%);
+  transition: all 1s ease-out;
+}
+
+.active {
+  opacity: 4;
+  transform: translateX(0);
+}
+/* end of fade in code */
+
 .about-text {
   margin-left: 5%;
   margin-right: 15%;
@@ -171,17 +190,23 @@ body {
   flex-direction: column;
 }
 
+
 .text-input {
   height: 30px;
   line-height: 30px;
 }
 
 .image-container {
+  
+}
+
+.rounded-image{
+  border-radius: 100px;
 }
 
 #projects-section {
   background-color: #ddffed;
-  margin-bottom: 400px;                     /*if the bottom of the timeline is giving me trouble, make this longer/shorter for the green background*/
+  margin-bottom: 1250px;                     /*if the bottom of the timeline is giving me trouble, make this longer/shorter for the green background*/
 }
 
 .project-content{
@@ -189,7 +214,20 @@ body {
   align-items: center;
 }
 
+.small-p{
+  font-size: medium;
+  text-align: center;
+}
 
+.image-shadow{
+  box-shadow: 10px 10px #153243;
+  border-style: solid;
+  border-color: #153243;
+}
+
+.image-shadow:hover{
+  transform: scale(1.2);
+}
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
@@ -212,6 +250,7 @@ body {
 
 /* Container around content */
 .container {
+  z-index: 1;
   padding: 10px 40px;
   position: relative;
   background-color: inherit;
@@ -220,6 +259,7 @@ body {
 
 /* The circles on the timeline */
 .container::after {
+  z-index: 1;
   content: '';
   position: absolute;
   width: 25px;
@@ -283,8 +323,12 @@ body {
   border-radius: 6px;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   animation: fade 1s;
+  border-radius: 17px;
 }
+
+
 
 /* The animation for project-box */
 @keyframes fade {
@@ -386,7 +430,7 @@ justify-content: space-evenly;
 
 /* coloured borders */
   input,textarea{
-    border: 2px solid #04AA6D;
+    border: 2px solid #153243;
     font-family: "Satoshi", sans-serif;
   }
   
@@ -420,7 +464,7 @@ input[type=message] {
 
 /* making the button green background */
 input[type=button], input[type=submit], input[type=reset] {
-  background-color: #04AA6D;
+  background-color: #153243;
   border: none;
   color: white;
   /* padding: 16px 32px; */
@@ -438,7 +482,7 @@ footer {
   margin-top: -8px;
   justify-content: center;
   align-items: center;
-  background-color: #fdfff8;
+  background-color: #ddffed;
   width: 100%;
   height: 60px;
 }

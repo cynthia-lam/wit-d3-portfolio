@@ -19,6 +19,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- attempt aos -->
     <script defer src="app.js"></script>
   </head>
 
@@ -37,6 +38,7 @@
     <section id="hero-section">
       <h1>Hi I'm Cynthia 😊</h1>
       <p>I'm an aspiring developer from Toronto!</p>
+      <p>View my resume <a href="Cynthia Lam - Health Tech Ed Resume.pdf" target="_blank"><em>here</em></a>!</p>
     </section>
 
     <section id="about-section">
@@ -45,26 +47,21 @@
         <!-- left text boxes -->
         <div class="about-text">
           <div><h2>About me:</h2></div>
-          <div>
+          <div class="fade-lefttoright">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Hello World! My name is Cynthia, a proud member of IDRF's WiT's 6th cohort! I'm currently an AI Education Intern at Vector Institute (it sounds fancier than it is, I promise!)
+               My professional interests include improving patient care, applying technology, and bridging 
+              the gap between the two industries through technical education and workshop facilitation. My favourite saying that I picked up recently is <em>"Never stop learning!"</em> - 
+              I strive to be both an amazing educator as well as a lifelong learner; I'm always picking up new skills and so thankful to also be meeting amazing people along the way.
             </p>
-          </div>
-          <div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              In my free time, I like to go rock climbing or hit the gym, sketch up stick-and-poke ideas, and try new experiences with my friends (potentially trying pottery and tufting next!)
             </p>
           </div>
         </div>
         <!-- pic -->
         <div class="image-container">
-          <img
+          <img class="fade-righttoleft rounded-image" 
             src="C:\Users\cynth\OneDrive\Desktop\Jobs\Cynthia Lam Photo.jpg"
             alt="In case you can't see, it's me!"
             style="width: 270px; height: 370px"
@@ -78,31 +75,48 @@
         <div><h2><br><br><br>Projects</h2></div>
       <!-- timeline -->
       <div class="timeline">
-        <div class="container left">
+        <div class="container left fade-lefttoright">
           <div class="project-box">
-            <h3>Project 1:</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.</p>
+            <br> <!-- room for the image to expand -->
+            <a href="file:///c%3A/Users/cynth/Documents/wit6/Calculator-Project/index.html" target="_blank">
+              <img src="Calculator.PNG" alt="Click here for spookiness" width="300" height="300" class="image-shadow">
+            </a>
+            <br> <!-- room for the image to expand -->
+            <h3>Project 1: Spooky Calculator</h3>
+            <p class="small-p">Made using purely HTML and CSS with the guidance of our amazing instructors. It's almost spooky season so I figured I'd jazz it up with some decorations!
+              You can check it out by clicking the photo or for more info, head to my <a href="https://github.com/cynthia-lam/Calculator-Project" target="_blank"> repo</a>.
+            </p>
           </div>
         </div>
-        <div class="container right">
+        <div class="container right fade-righttoleft">
           <div class="project-box">
-            <h3>Project 2:</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.</p>
+            <br> <!-- room for the image to expand -->
+            <a href="https://docs.google.com/presentation/d/1Vo10Z7AV2igm2AAMFAHlo3YNz1524qer/edit#slide=id.p1" target="_blank">
+              <img src="BT PPG.PNG" alt="Click here for my capstone project!" width="300" height="300" class="image-shadow" >
+            </a>
+            <br> <!-- room for the image to expand -->
+            <h3>Project 2: Bluetooth Photoplethysmography Sensor</h3>
+            <p class="small-p">Using Arduino, C++, and way too many online guides, I made a heart rate sensor for my Mech Eng Capstone Project at UBC.</p>
           </div>
         </div>
-        <div class="container left">
+        <div class="container left fade-lefttoright">
           <div class="project-box">
-            <h3>Project 3:</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.</p>
+            <br> <!-- room for the image to expand -->
+            <a href="https://docs.google.com/document/d/1dANJaybaZrVs12NpgMmlbnapEuEPxgbA/edit" target="_blank">
+              <img src="Fickle Cat.PNG" alt="Click here for a mean cat!" width="300" height="300" class="image-shadow" >
+            </a>
+            <br> <!-- room for the image to expand -->
+            <h3>Project 3: Fickle Cat</h3>
+            <p class="small-p">Round two of Arduino! As a final project for my one of my prototyping class, we had to create a toy with a cardboard exterior, and an Arduino and at least 3 moving parts for the interior.
+              This cat is fickle and every 5 seconds will change its mind, displaying a blue light for "Please pet - come closer!", red for "Don't touch me - move further!", and green for "That's a good distance". The 3 moving parts
+              are a proximity sensor, a motor arm for displaying its mood, and a RGB LED. 
+            </p>
+          </div>
+        </div>
+        <div class="container right fade-righttoleft">
+          <div class="project-box">
+            <h3>More to come!</h3>
+            <p class="small-p">👀</p>
           </div>
         </div>
       </div>
@@ -116,28 +130,22 @@
           <div><h2>Let's connect!</h2></div>
           <div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              I'd be happy to connect to chat about anything and everything! Feel free to check out my LinkedIn and GitHub, linked below.
             </p>
           </div>
           <div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              For specific inquiries, you can send me an email using the form on the right and I'll get back to you as soon as I can!
             </p>
           </div>
           <br>
         <div id="logo-container">
           <!-- link to email, LI, github -->
           <a href="https://www.linkedin.com/in/lam-cynthia/"
-            ><i class="fa-brands fa-linkedin fa-2xl" style="color: #2fb8d0"></i
+            ><i class="fa-brands fa-linkedin fa-2xl" style="color: #153243"></i
           ></a>
           <a href="https://github.com/cynthia-lam"
-            ><i class="fa-brands fa-github fa-2xl" style="color: #2fb8d0"></i
+            ><i class="fa-brands fa-github fa-2xl" style="color: #153243"></i
           ></a>
         </div>
       </div>
