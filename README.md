@@ -14,6 +14,7 @@ There were a lot of things that went right and so many more that went wrong. Her
 - smooth scroll
 - timeline creation
 - z-index
+- [multiple classes](https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/CSS_FAQ)
 - [animate on scroll](https://blog.hubspot.com/website/css-animate-on-scroll#how)
 
 ```css
