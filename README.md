@@ -17,12 +17,14 @@ There were a lot of things that went right and so many more that went wrong. Her
 - [multiple classes](https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/CSS_FAQ#how_do_i_assign_multiple_classes_to_an_element)
 - [animate on scroll](https://blog.hubspot.com/website/css-animate-on-scroll#how)
 
+The best single line of code:
 ```css
 html {
   scroll-behavior: smooth;
 }
 ```
 
+Some javascript I was proud to figure out/work with:
 ```javascript
 const elements = document.querySelectorAll('.fade-lefttoright');
 const options = {
