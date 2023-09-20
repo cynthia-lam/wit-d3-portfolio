@@ -14,6 +14,7 @@ html {
   top: 0px;
   background-color: #153243;
   width: 100%;
+  z-index: 1000;
 }
 
 /* applies font to all elements in the body */
@@ -41,15 +42,13 @@ body {
   margin-right: 100px;
 }
 
-/* apply flexbox to ANY AND ALL ELEMENTS */
+/* apply flexbox to ANY AND ALL ELEMENTS --------------------------------------------------------------------------------------------------------------------------------------------------*/
 nav,
 .nav-list,
 #hero-section,
 #about-section,
 .about-info,
-#projects-section,
-.project-info,
-.project-boxes, 
+.project-content,
 .project-box,
 #contact-section, 
 .contact-info,
@@ -59,6 +58,7 @@ nav,
 footer {
   display: flex;
 }
+/* apply flexbox to ANY AND ALL ELEMENTS --------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* remove list style type, width to 25% of parent (nav) */
 .nav-list {
@@ -80,7 +80,7 @@ nav {
 }
 
 #hero-section {
-  background-color: #fdfff8;
+  background-color: #ddffed;
   color: #153243;
 }
 
@@ -131,6 +131,7 @@ footer {
   margin-top: 108px;
 }
 
+
 #hero-section {
   flex-direction: column;
   justify-content: center;
@@ -146,13 +147,13 @@ p {
 }
 
 body {
-  background-color: #fdfff8;
+  background-color: #ddffed;
 }
 
 #about-section {
   justify-content: space-evenly;
   align-items: center;
-  background-color: #ddffed;
+  background-color: #fdfff8;
 }
 
 .about-info {
@@ -179,20 +180,165 @@ body {
 }
 
 #projects-section {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #fdfff8;
+  background-color: #ddffed;
+  margin-bottom: 400px;                     /*if the bottom of the timeline is giving me trouble, make this longer/shorter for the green background*/
 }
 
-.project-info{
+.project-content{
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: rgb(255, 255, 255);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #153243;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  right: 6.75%;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.project-box {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  flex-direction: column;
+  justify-content: center;
+  animation: fade 1s;
+}
+
+/* The animation for project-box */
+@keyframes fade {
+  0%{
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100%{
+    opacity: 100;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+/* .project-info{
   justify-content: space-between;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.project-boxes{
+/* .project-boxes{
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
@@ -200,20 +346,20 @@ body {
 
 .project-box {
   flex-direction: column;
-  background-color: #153243;
+  background-color: #ddffed;
   justify-content: center;
   align-items: center;
   margin: 50px;
   padding: 10px;
   text-align: center;
   border-radius: 10px;
-}
+} */
 
 #contact-section {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background-color: #ddffed;
+  background-color: #fdfff8;
 }
 
 .contact-info {
